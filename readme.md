@@ -33,6 +33,7 @@ https://github.com/cgohlke/talib-build/releases
 
 ```pip install pyalgotrade```
 ```pip install yfinance```
+```pip install plotly```
 ```pip install finance-datareader```
 
 -----
