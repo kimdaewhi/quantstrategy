@@ -11,4 +11,4 @@ if __name__ == '__main__':
     kospi = fdr.StockListing('KOSPI')
     kosdaq = fdr.StockListing('KOSDAQ')
 
-    print(kospi[['Code', 'Name']])
+    kospi

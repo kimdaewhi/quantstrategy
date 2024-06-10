@@ -35,7 +35,8 @@ https://github.com/cgohlke/talib-build/releases
 ```pip install yfinance```
 ```pip install plotly```
 ```pip install finance-datareader```
-
+```pip install plotly```                    finance-datareader 종속성 패키지
+```pip install tabulate[widechars]```       DataFrame 이쁘게 출력
 -----
 
 ### backtrader 정리

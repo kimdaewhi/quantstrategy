@@ -129,23 +129,23 @@ if __name__ == '__main__':
     kosdaq = fdr.StockListing('KOSDAQ')
 
 
-    # for ticker in tickers:
-    #     data = yf.download(ticker, start='2009-01-01', end='2019-12-31')
-    #     data.to_csv(os.path.join(data_dir, f'{ticker}.csv'))
+    for ticker in tickers:
+        data = yf.download(ticker, start='2009-01-01', end='2019-12-31')
+        data.to_csv(os.path.join(data_dir, f'{ticker}.csv'))
 
 
-    # for ticker in tickers:
-    #     data_path = os.path.join(data_dir, f'{ticker}.csv')
-    #     data = bt.feeds.YahooFinanceCSVData(
-    #         dataname=data_path,
-    #         fromdate=datetime.datetime(2000, 1, 1),
-    #         todate=datetime.datetime(2020, 12, 31),
-    #         reverse=False)
-    #     cerebro.adddata(data, name=ticker)
+    for ticker in tickers:
+        data_path = os.path.join(data_dir, f'{ticker}.csv')
+        data = bt.feeds.YahooFinanceCSVData(
+            dataname=data_path,
+            fromdate=datetime.datetime(2000, 1, 1),
+            todate=datetime.datetime(2020, 12, 31),
+            reverse=False)
+        cerebro.adddata(data, name=ticker)
 
-    # cerebro.broker.set_cash(1000000.0)
-    # cerebro.broker.setcommission(commission=0.001)
+    cerebro.broker.set_cash(1000000.0)
+    cerebro.broker.setcommission(commission=0.001)
     
-    # print('Starting Portfolio Value: %.2f' % cerebro.broker.getvalue())
-    # cerebro.run()
-    # print('Final Portfolio Value: %.2f' % cerebro.broker.getvalue())
+    print('Starting Portfolio Value: %.2f' % cerebro.broker.getvalue())
+    cerebro.run()
+    print('Final Portfolio Value: %.2f' % cerebro.broker.getvalue())
