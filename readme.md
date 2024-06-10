@@ -32,3 +32,27 @@ https://github.com/cgohlke/talib-build/releases
 파이썬 버전 확인 ex) 3.12.2 = cpp_312어쩌고
 
 ```pip install pyalgotrade```
+```pip install yfinance```
+```pip install finance-datareader```
+
+-----
+
+### backtrader 정리
+
+1. 전략 class는 backtrader의 Strategy를 상속받아서 사용한다.
+    ```python
+    import backtrader as bt
+    .
+    .
+    .
+    class MyStrategy(bt.Strategy):
+        def log:
+            .
+            .
+    ```
+
+2. ```bt.Strategy``` 클래스에서 제공하는 기본 메서드 종류
+   - ```__init__``` : 인스턴스 초기화 시 사용하는 메서드
+   - ```notify__order``` : 주문 상태 변경을 알리기 위한 메서드. 주문 제출, 접수, 완료, 취소 등
+   - ```next``` : 매일 호출되는 메서드. 새로운 데이터가 입력될 때마다 호출되어 트레이딩 로직을 실행함.
+   - ```stop``` : 백테스트가 종료될 때 호출되는 메서드
