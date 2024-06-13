@@ -118,6 +118,20 @@ if __name__ == '__main__':
                     stop_loss=-0.1)
 
     # 여기서 종목 선정 해야함.
+    # 1. 관리종목(투자유의 + 투자경고 + 투자위험)
+    # 2. 각 주식 과거 6개월 수익률 기준 상위 20종목
+    # 3. 과거 4개 분기 실적 당기순이익 적자 기업 제외
+    # 4. 각 주식의 과거 3/6/9/12 개월 수익률 기준으로 각각의 수익률 평균 계산.
+    df_kospi = fdr.StockListing('KOSPI')
+    df_kosdaq = fdr.StockListing('KOSDAQ')
+
+    # 관리종목
+    df_AdmStock = fdr.StockListing('KRX-ADMIN')
+
+    # 상장종목(KOSPI, KOSDAQ)에서 관리종목 제외
+    df_krx = pd.concat([df_kospi, df_kosdaq])
+    df_filterStk = df_krx[~df_krx['Code'].isin(df_AdmStock['Symbol'])]
+
     # tickers = ['AAPL', 'MSFT', 'GOOGL', 'AMZN', 'FB']  # Example tickers, replace with KOSPI/KOSDAQ tickers
     data_dir = './data'
 

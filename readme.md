@@ -37,6 +37,8 @@ https://github.com/cgohlke/talib-build/releases
 ```pip install finance-datareader```
 ```pip install plotly```                    finance-datareader 종속성 패키지
 ```pip install tabulate[widechars]```       DataFrame 이쁘게 출력
+```pip install openpyxl```                  Excel 관련
+
 -----
 
 ### backtrader 정리
@@ -116,3 +118,12 @@ https://github.com/cgohlke/talib-build/releases
     **🌟 리스크 관리**
     
     1. 포트폴리오중 수익률 -10%이상인 종목 손절 후 수익률이 가장 높은 종목 비중 증가.
+
+
+    ----- 
+
+    1. 한국시장 대상으로 진행할꺼라 FinanceDataReader 사용. 하지만 이건 주가관련 데이터만 제공함.
+
+    2. 펀더멘탈 데이터는 Dart API사용하거나 다른 API 사용해야 하는데...
+    ```dart-fss``` 라이브러리 사용해보자.(예전에 써봤으니까)  
+     ❗예전에 썻던 계정 임시 비번 발급받아서 로그인하려는데 안됨;;;😭😭😭
