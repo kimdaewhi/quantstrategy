@@ -38,6 +38,7 @@ https://github.com/cgohlke/talib-build/releases
 ```pip install plotly```                    finance-datareader 종속성 패키지
 ```pip install tabulate[widechars]```       DataFrame 이쁘게 출력
 ```pip install openpyxl```                  Excel 관련
+```pip install dart-fss```                  재무 데이터 관련
 
 -----
 
