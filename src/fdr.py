@@ -28,8 +28,8 @@ if __name__ == '__main__':
     df_krx = pd.concat([df_kospi, df_kosdaq])
 
     # ⭐ Excel Export
-    # df_krx.to_excel('stock_list.xlsx', index=False);
-    # df_AdmStock.to_excel('adm_stock_list.xlsx', index=False);
+    # df_krx.to_excel('stock_list.xlsx', index=False)
+    # df_AdmStock.to_excel('adm_stock_list.xlsx', index=False)
 
     # 관리종목 제거
     df_filterStk = df_krx[~df_krx['Code'].isin(df_AdmStock['Symbol'])]
