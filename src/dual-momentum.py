@@ -57,7 +57,7 @@ class DualMomentum(bt.Strategy):
             return
 
         dt = self.datas[0].datetime.date(0)
-        # 리밸런싱 주기가 지난 경우 포트폴리오 리밸런싱
+        # 리밸런싱 주기가 지난 경우 포트폴리오 리밸런싱 or 초기 설정
         if self.last_rebalance is None or (dt - self.last_rebalance).days >= self.params.rebalance_months * 30:
             self.rebalance_portfolio()
             self.last_rebalance = dt
